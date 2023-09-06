@@ -54,7 +54,7 @@
   <properties>
     <application-name>Camel Cookbook Examples</application-name>
 
-    <camel-version>2.20.0-SNAPSHOT</camel-version>
+    <camel-version>2.20.0</camel-version>
 
     <activemq-version>5.14.5</activemq-version>
     <aries-blueprint-api-version>1.0.1</aries-blueprint-api-version>
@@ -80,7 +80,7 @@
     <slf4j-version>1.7.22</slf4j-version>
     <spring-boot-version>1.5.4.RELEASE</spring-boot-version>
     <spring-security-version>4.1.4.RELEASE</spring-security-version>
-    <spring4-version>4.3.10.RELEASE</spring4-version>
+    <spring4-version>4.3.11.RELEASE</spring4-version>
     <swagger-java-guava-version>20.0</swagger-java-guava-version>
     <swagger-java-version>1.5.16</swagger-java-version>
     <xalan-version>2.7.2</xalan-version>
@@ -441,7 +441,21 @@
         <artifactId>junit</artifactId>
         <version>${junit-version}</version>
         <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
+
+      <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-library</artifactId>
+        <version>2.2</version>
+        <scope>test</scope>
+      </dependency>
+
 
       <!-- logging dependencies -->
       <dependency>
